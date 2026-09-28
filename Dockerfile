@@ -21,6 +21,7 @@ COPY tsconfig.json ./
 # stitches src/ui into public/index.html, tsc compiles, copy-assets mirrors the
 # runtime rule packs. Without this the image build dies on a missing module.
 COPY scripts ./scripts
+COPY native ./native
 COPY src ./src
 RUN npm run build
 
